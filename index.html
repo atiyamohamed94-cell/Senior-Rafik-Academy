@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14532d">
+  <title>أكاديمية سنيور رفيق | الإيطالي ببساطة</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">SR</div>
+        <div><strong>سنيور رفيق</strong><small>أكاديمية الإيطالي</small></div>
+      </div>
+      <div class="role-switch">
+        <label for="roleSelect">عرض تجريبي للواجهة</label>
+        <select id="roleSelect">
+          <option value="teacher">واجهة المدرس</option>
+          <option value="student">واجهة الطالب</option>
+        </select>
+        <small>تبديل العرض هنا للتجربة فقط، وليس نظام صلاحيات حقيقي.</small>
+      </div>
+      <nav id="navigation" aria-label="القائمة الرئيسية"></nav>
+      <div class="sidebar-footer"><span class="status-dot"></span> نسخة تجريبية محلية <small>البيانات محفوظة على هذا الجهاز</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button id="menuToggle" class="icon-btn" aria-label="فتح القائمة">☰</button>
+        <div><p class="eyebrow">BENVENUTI · أهلاً بيك</p><h1 id="pageTitle">لوحة التحكم</h1></div>
+        <div class="topbar-actions"><span class="today" id="todayLabel"></span><div class="avatar">SR</div></div>
+      </header>
+      <section id="appContent" class="content" aria-live="polite"></section>
+      <footer class="footer">سنيور رفيق · <span>Impara l’italiano con fiducia</span></footer>
+    </main>
+  </div>
+  <dialog id="itemDialog">
+    <form id="itemForm" method="dialog">
+      <div class="dialog-head"><h2 id="dialogTitle">إضافة جديد</h2><button class="icon-btn" type="button" id="closeDialog" aria-label="إغلاق">×</button></div>
+      <div id="formFields" class="form-fields"></div>
+      <div class="dialog-actions"><button type="button" class="btn btn-light" id="cancelDialog">إلغاء</button><button type="submit" class="btn btn-primary">حفظ</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
